@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t elite .
-      - docker tag elite:latest 911870334818.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/elite:latest      
+      - docker build -t docker1 .
+      - docker tag docker1:latest 911870334818.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/docker1:latest      
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 911870334818.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/elite:latest
+      - docker push 911870334818.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/docker1:latest
